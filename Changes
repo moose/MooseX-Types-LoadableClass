@@ -1,3 +1,4 @@
+0.009 2013-06-10
   - now performing type checking in the type check itself, not the coercion,
     to fix results when the type check fails (RT#86041, Karen Etheridge)
 
