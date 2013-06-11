@@ -45,7 +45,6 @@ MooseX::Types::LoadableClass - ClassName type constraint with coercion to load t
         is => 'ro',
         required => 1,
         isa => LoadableClass,
-        coerce => 1,
     );
 
     MyClass->new(foobar_class => 'FooBar'); # FooBar.pm is loaded or an
