@@ -78,6 +78,8 @@ Tomas Doran (t0m) C<< <bobtfish@bobtfish.net> >>
 
 Florian Ragwitz (rafl) C<< <rafl@debian.org> >>
 
+Karen Etheridge (ether) C<< <ether@cpan.org> >>
+
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (c) 2010 the above named authors.
