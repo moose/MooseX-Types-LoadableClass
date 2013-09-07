@@ -35,11 +35,11 @@ Now I don't have to.
 
 # TYPES EXPORTED
 
-## LoadableClass
+## `LoadableClass`
 
 A normal class / package.
 
-## LoadableRole
+## `LoadableRole`
 
 Like `LoadableClass`, except the loaded package must be a [Moose::Role](http://search.cpan.org/perldoc?Moose::Role).
 
