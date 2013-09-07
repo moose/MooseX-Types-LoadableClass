@@ -61,7 +61,7 @@ MooseX::Types::LoadableClass - ClassName type constraint with coercion to load t
     use Moose::Util::TypeConstraints;
 
     my $tc = subtype as ClassName;
-    coerce $tc, from Str, via { Class::MOP::load_class($_); $_ };
+    coerce $tc, from Str, via { Class::Load::load_class($_); $_ };
 
 I've written those three lines of code quite a lot of times, in quite
 a lot of places.
