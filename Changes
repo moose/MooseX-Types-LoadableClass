@@ -2,6 +2,7 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
   - avoid trying to load the class if already loaded (minor optimization)
+  - repository moved to the github moose organization
 
 0.009 2013-06-10
   - now performing type checking in the type check itself, not the coercion,
