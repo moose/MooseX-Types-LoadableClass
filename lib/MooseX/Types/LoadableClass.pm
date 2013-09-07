@@ -4,7 +4,7 @@ use warnings;
 use MooseX::Types -declare => [qw/ ClassName LoadableClass LoadableRole /];
 use MooseX::Types::Moose qw(Str RoleName), ClassName => { -as => 'MooseClassName' };
 use Moose::Util::TypeConstraints;
-use Class::Load qw/ load_optional_class /;
+use Class::Load qw(is_class_loaded load_optional_class);
 use namespace::clean -except => [qw/ import /];
 
 our $VERSION = '0.009';
@@ -12,11 +12,17 @@ $VERSION = eval $VERSION;
 
 subtype LoadableClass,
     as Str,
-    where { load_optional_class($_) and MooseClassName->check($_) };
+    where {
+        is_class_loaded($_) || load_optional_class($_)
+            and MooseClassName->check($_)
+    };
 
 subtype LoadableRole,
     as Str,
-    where { load_optional_class($_) and RoleName->check($_) };
+    where {
+        is_class_loaded($_) || load_optional_class($_)
+            and RoleName->check($_)
+    };
 
 
 # back compat
