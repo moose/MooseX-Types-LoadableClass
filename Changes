@@ -1,3 +1,6 @@
+Revision history for {{$dist->name}}
+
+{{$NEXT}}
   - avoid trying to load the class if already loaded (minor optimization)
 
 0.009 2013-06-10

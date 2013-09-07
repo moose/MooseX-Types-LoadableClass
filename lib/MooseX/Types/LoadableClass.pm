@@ -1,14 +1,12 @@
 package MooseX::Types::LoadableClass;
+# ABSTRACT: ClassName type constraint with coercion to load the class.
 use strict;
 use warnings;
 use MooseX::Types -declare => [qw/ ClassName LoadableClass LoadableRole /];
 use MooseX::Types::Moose qw(Str RoleName), ClassName => { -as => 'MooseClassName' };
 use Moose::Util::TypeConstraints;
 use Class::Load qw(is_class_loaded load_optional_class);
-use namespace::clean -except => [qw/ import /];
-
-our $VERSION = '0.009';
-$VERSION = eval $VERSION;
+use namespace::autoclean;
 
 subtype LoadableClass,
     as Str,
@@ -36,10 +34,6 @@ __PACKAGE__->type_storage->{ClassName}
 __PACKAGE__->meta->make_immutable;
 1;
 __END__
-
-=head1 NAME
-
-MooseX::Types::LoadableClass - ClassName type constraint with coercion to load the class.
 
 =head1 SYNOPSIS
 
@@ -77,20 +71,3 @@ A normal class / package.
 =head2 LoadableRole
 
 Like C<LoadableClass>, except the loaded package must be a L<Moose::Role>.
-
-=head1 AUTHORS
-
-Tomas Doran (t0m) C<< <bobtfish@bobtfish.net> >>
-
-Florian Ragwitz (rafl) C<< <rafl@debian.org> >>
-
-Karen Etheridge (ether) C<< <ether@cpan.org> >>
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (c) 2010 the above named authors.
-
-Licensed under the same terms as perl itself.
-
-=cut
-
