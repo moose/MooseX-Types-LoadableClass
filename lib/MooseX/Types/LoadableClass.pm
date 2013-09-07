@@ -35,6 +35,8 @@ __PACKAGE__->meta->make_immutable;
 1;
 __END__
 
+=for stopwords ClassName
+
 =head1 SYNOPSIS
 
     package MyClass;
@@ -64,10 +66,10 @@ Now I don't have to.
 
 =head1 TYPES EXPORTED
 
-=head2 LoadableClass
+=head2 C<LoadableClass>
 
 A normal class / package.
 
-=head2 LoadableRole
+=head2 C<LoadableRole>
 
 Like C<LoadableClass>, except the loaded package must be a L<Moose::Role>.
