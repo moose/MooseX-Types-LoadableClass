@@ -41,4 +41,14 @@ ok $@;
 ok !eval { MyClass->new(foobar_role => 'FooBarTestRoleDoesNotExist') };
 ok $@;
 
+use MooseX::Types::LoadableClass qw/LoadableClass LoadableRole/;
+
+for my $name (qw(Non::Existent::Module ::Syntactically::Invalid::Name)) {
+    for my $tc (LoadableClass, LoadableRole) {
+        ok eval { ! $tc->check($name) };
+        ok eval { ! $tc->check($name) };
+    }
+}
+
+
 done_testing;
