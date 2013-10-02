@@ -6,19 +6,22 @@ use MooseX::Types -declare => [qw/ ClassName LoadableClass LoadableRole /];
 use MooseX::Types::Moose qw(Str RoleName), ClassName => { -as => 'MooseClassName' };
 use Moose::Util::TypeConstraints;
 use Class::Load qw(is_class_loaded load_optional_class);
+use Module::Runtime qw(is_module_name);
 use namespace::autoclean;
 
 subtype LoadableClass,
     as Str,
     where {
-        is_class_loaded($_) || load_optional_class($_)
+        is_module_name($_)
+            and is_class_loaded($_) || load_optional_class($_)
             and MooseClassName->check($_)
     };
 
 subtype LoadableRole,
     as Str,
     where {
-        is_class_loaded($_) || load_optional_class($_)
+        is_module_name($_)
+            and is_class_loaded($_) || load_optional_class($_)
             and RoleName->check($_)
     };
 
