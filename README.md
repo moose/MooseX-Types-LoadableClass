@@ -4,7 +4,7 @@ MooseX::Types::LoadableClass - ClassName type constraint with coercion to load t
 
 # VERSION
 
-version 0.010
+version 0.011
 
 # SYNOPSIS
 
@@ -43,11 +43,9 @@ A normal class / package.
 
 Like `LoadableClass`, except the loaded package must be a [Moose::Role](http://search.cpan.org/perldoc?Moose::Role).
 
-# AUTHORS
+# AUTHOR
 
-- Tomas Doran <bobtfish@bobtfish.net>
-- Florian Ragwitz <rafl@debian.org>
-- Karen Etheridge <ether@cpan.org>
+Tomas Doran <bobtfish@bobtfish.net>
 
 # COPYRIGHT AND LICENSE
 
@@ -55,3 +53,9 @@ This software is copyright (c) 2010 by Infinity Interactive, Inc.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
+
+# CONTRIBUTORS
+
+- Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>
+- Florian Ragwitz <rafl@debian.org>
+- Karen Etheridge <ether@cpan.org>
