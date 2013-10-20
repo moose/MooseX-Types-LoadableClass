@@ -4,7 +4,7 @@ MooseX::Types::LoadableClass - ClassName type constraint with coercion to load t
 
 # VERSION
 
-version 0.011
+version 0.012
 
 # SYNOPSIS
 
