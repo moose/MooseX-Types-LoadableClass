@@ -7,7 +7,7 @@ use MooseX::Types::Moose qw(Str RoleName), ClassName => { -as => 'MooseClassName
 use Moose::Util::TypeConstraints;
 use Class::Load qw(is_class_loaded load_optional_class);
 use Module::Runtime qw(is_module_name);
-use namespace::autoclean;
+use if MooseX::Types->VERSION >= 0.42, 'namespace::autoclean';
 
 subtype LoadableClass,
     as Str,
