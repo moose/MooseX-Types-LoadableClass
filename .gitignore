@@ -1,3 +1,6 @@
+/.ackrc
 /.build/
-!.gitignore
-/MooseX-Types-LoadableClass-*
+!/.gitignore
+/.latest
+/MooseX-Types-LoadableClass-*/
+/MooseX-Types-LoadableClass-*.tar.gz
