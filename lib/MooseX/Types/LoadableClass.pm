@@ -7,15 +7,14 @@ use warnings;
 use MooseX::Types -declare => [qw/ ClassName LoadableClass LoadableRole /];
 use MooseX::Types::Moose qw(Str RoleName), ClassName => { -as => 'MooseClassName' };
 use Moose::Util::TypeConstraints;
-use Class::Load qw(is_class_loaded load_optional_class);
-use Module::Runtime qw(is_module_name);
+use Module::Runtime qw(is_module_name use_package_optimistically);
 use if MooseX::Types->VERSION >= 0.42, 'namespace::autoclean';
 
 subtype LoadableClass,
     as Str,
     where {
         is_module_name($_)
-            and is_class_loaded($_) || load_optional_class($_)
+            and use_package_optimistically($_)
             and MooseClassName->check($_)
     };
 
@@ -23,7 +22,7 @@ subtype LoadableRole,
     as Str,
     where {
         is_module_name($_)
-            and is_class_loaded($_) || load_optional_class($_)
+            and use_package_optimistically($_)
             and RoleName->check($_)
     };
 
