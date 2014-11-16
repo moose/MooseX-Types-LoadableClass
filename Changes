@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.013     2014-11-16 21:29:04Z
   - switch from Class::Load to Module::Runtime for loading modules
 
 0.012     2013-10-20 19:04:23Z

@@ -1,12 +1,16 @@
-# NAME
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
 
 MooseX::Types::LoadableClass - ClassName type constraint with coercion to load the class.
 
-# VERSION
+=head1 VERSION
 
-version 0.012
+version 0.013
 
-# SYNOPSIS
+=head1 SYNOPSIS
 
     package MyClass;
     use Moose;
@@ -21,7 +25,7 @@ version 0.012
     MyClass->new(foobar_class => 'FooBar'); # FooBar.pm is loaded or an
                                             # exception is thrown.
 
-# DESCRIPTION
+=head1 DESCRIPTION
 
     use Moose::Util::TypeConstraints;
 
@@ -33,29 +37,51 @@ a lot of places.
 
 Now I don't have to.
 
-# TYPES EXPORTED
+=for stopwords ClassName
 
-## `LoadableClass`
+=head1 TYPES EXPORTED
+
+=head2 C<LoadableClass>
 
 A normal class / package.
 
-## `LoadableRole`
+=head2 C<LoadableRole>
 
-Like `LoadableClass`, except the loaded package must be a [Moose::Role](http://search.cpan.org/perldoc?Moose::Role).
+Like C<LoadableClass>, except the loaded package must be a L<Moose::Role>.
 
-# AUTHOR
+=head1 AUTHOR
 
 Tomas Doran <bobtfish@bobtfish.net>
 
-# COPYRIGHT AND LICENSE
+=head1 COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2010 by Infinity Interactive, Inc.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-# CONTRIBUTORS
+=head1 CONTRIBUTORS
 
-- Dagfinn Ilmari Manns�ker <ilmari@ilmari.org>
-- Florian Ragwitz <rafl@debian.org>
-- Karen Etheridge <ether@cpan.org>
+=for stopwords Karen Etheridge Dagfinn Ilmari Mannsåker Florian Ragwitz Сергей Романов
+
+=over 4
+
+=item *
+
+Karen Etheridge <ether@cpan.org>
+
+=item *
+
+Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>
+
+=item *
+
+Florian Ragwitz <rafl@debian.org>
+
+=item *
+
+Сергей Романов <sromanov@cpan.org>
+
+=back
+
+=cut
