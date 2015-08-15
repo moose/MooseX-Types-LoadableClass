@@ -11,7 +11,7 @@ ok !is_class_loaded('FooBarTestClass');
 ok LoadableClass->check('FooBarTestClass');
 ok is_class_loaded('FooBarTestClass');
 ok(is_LoadableClass('FooBarTestClass'), 'is_LoadableClass');
-use namespace::clean -except => [qw/ import /];
+use namespace::clean 0.19 -except => [qw/ import /];
 
 ok !LoadableClass->check('FooBarTestClassDoesNotExist');
 ok(!is_LoadableClass('FooBarTestClassDoesNotExist'));
