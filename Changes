@@ -1,5 +1,7 @@
 Revision history for MooseX-Types-LoadableClass
 
+{{$NEXT}}
+
 0.014     2015-08-16 02:03:26Z
   - update some distribution tooling
 
