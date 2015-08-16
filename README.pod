@@ -8,7 +8,7 @@ MooseX::Types::LoadableClass - ClassName type constraint with coercion to load t
 
 =head1 VERSION
 
-version 0.013
+version 0.014
 
 =head1 SYNOPSIS
 
@@ -53,13 +53,6 @@ Like C<LoadableClass>, except the loaded package must be a L<Moose::Role>.
 
 Tomas Doran <bobtfish@bobtfish.net>
 
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2010 by Infinity Interactive, Inc.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
 =head1 CONTRIBUTORS
 
 =for stopwords Karen Etheridge Dagfinn Ilmari Mannsåker Florian Ragwitz Сергей Романов
@@ -83,5 +76,12 @@ Florian Ragwitz <rafl@debian.org>
 Сергей Романов <sromanov@cpan.org>
 
 =back
+
+=head1 COPYRIGHT AND LICENCE
+
+This software is copyright (c) 2010 by Infinity Interactive, Inc.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
