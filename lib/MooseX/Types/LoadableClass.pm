@@ -6,7 +6,7 @@ our $VERSION = '0.015';
 
 use strict;
 use warnings;
-use MooseX::Types -declare => [qw/ ClassName LoadableClass LoadableRole /];
+use MooseX::Types -declare => [qw/ LoadableClass LoadableRole /];
 use MooseX::Types::Moose qw(Str RoleName), ClassName => { -as => 'MooseClassName' };
 use Module::Runtime qw(is_module_name use_package_optimistically);
 use if MooseX::Types->VERSION >= 0.42, 'namespace::autoclean';
