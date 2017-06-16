@@ -2,7 +2,7 @@ package MooseX::Types::LoadableClass;
 # ABSTRACT: ClassName type constraint with coercion to load the class.
 # KEYWORDS: moose types constraints class classes role roles module modules
 
-our $VERSION = '0.015';
+our $VERSION = '0.016';
 
 use strict;
 use warnings;
