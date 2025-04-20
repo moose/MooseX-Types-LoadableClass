@@ -8,7 +8,7 @@ MooseX::Types::LoadableClass - ClassName type constraint with coercion to load t
 
 =head1 VERSION
 
-version 0.015
+version 0.016
 
 =head1 SYNOPSIS
 
@@ -66,7 +66,7 @@ Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 CONTRIBUTORS
 
-=for stopwords Karen Etheridge Dagfinn Ilmari Mannsåker Florian Ragwitz Gregory Oschwald Сергей Романов
+=for stopwords Karen Etheridge Dagfinn Ilmari Mannsåker Florian Ragwitz Graham Knop Gregory Oschwald Сергей Романов
 
 =over 4
 
@@ -81,6 +81,10 @@ Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>
 =item *
 
 Florian Ragwitz <rafl@debian.org>
+
+=item *
+
+Graham Knop <haarg@haarg.org>
 
 =item *
 
