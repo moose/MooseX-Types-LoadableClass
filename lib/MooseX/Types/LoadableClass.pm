@@ -36,7 +36,6 @@ coerce LoadableRole, from Str, via { $_ };
 __PACKAGE__->type_storage->{ClassName}
     = __PACKAGE__->type_storage->{LoadableClass};
 
-__PACKAGE__->meta->make_immutable;
 1;
 __END__
 
