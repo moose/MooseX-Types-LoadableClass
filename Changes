@@ -1,6 +1,8 @@
 Revision history for MooseX-Types-LoadableClass
 
 {{$NEXT}}
+  - remove unneeded call to ->meta->make_immutable, now necessary with
+    MooseX::Types 0.51
 
 0.015     2017-06-16 23:37:46Z
   - do not create an extra, unused ClassName type (this fixes a problem
